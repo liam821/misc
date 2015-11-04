@@ -4,6 +4,28 @@
 create an interactive shell and listen on a port
 liam@slacker.com
 
+howto:
+
+import interactive
+ss = interactive.socketshell()
+ss.start(8800)
+
+extends the running appliation varables as main.XXX
+
+-bash-4.1$ telnet localhost 8800
+Trying ::1...
+telnet: connect to address ::1: Connection refused
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+>>> print 1+1
+2
+>>> main.somevar = 1
+>>> print main.somevar
+1
+>>> 
+
+
 '''
 
 import thread
