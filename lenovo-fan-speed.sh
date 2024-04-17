@@ -71,11 +71,11 @@ echo "Percentage: $percentage"
 echo "Decimal value (1-255): $value"
 echo "Hexadecimal value: $hex_value"
 
-echo "Setting Fan 1 to ${value}%"
+echo "Setting Fan 1 to ${percentage}%"
 ipmitool -I lanplus -H ${HOST} -U ${USERNAME} -P ${PASS} raw 0x3a 0x07 0x01 0x${hex_value} 0x01
-echo "Setting Fan 2 to ${value}%"
+echo "Setting Fan 2 to ${percentage}%"
 ipmitool -I lanplus -H ${HOST} -U ${USERNAME} -P ${PASS} raw 0x3a 0x07 0x02 0x${hex_value} 0x01
-echo "Setting Fan 3 to ${value}%"
+echo "Setting Fan 3 to ${percentage}%"
 ipmitool -I lanplus -H ${HOST} -U ${USERNAME} -P ${PASS} raw 0x3a 0x07 0x03 0x${hex_value} 0x01
-echo "Setting Fan 4 to ${value}%"
+echo "Setting Fan 4 to ${percentage}%"
 ipmitool -I lanplus -H ${HOST} -U ${USERNAME} -P ${PASS} raw 0x3a 0x07 0x04 0x${hex_value} 0x01
